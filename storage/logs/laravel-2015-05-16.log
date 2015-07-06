@@ -1,0 +1,7 @@
+[2015-05-16 19:44:28] local.ERROR: exception 'InvalidArgumentException' with message 'Command "azea" is not defined.' in C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php:549
+Stack trace:
+#0 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(192): Symfony\Component\Console\Application->find('azea')
+#1 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\wamp\www\Projets_MVC_Free_Ads\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\wamp\www\Projets_MVC_Free_Ads\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  

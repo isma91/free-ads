@@ -1,0 +1,101 @@
+[2015-05-11 08:27:24] local.ERROR: exception 'RuntimeException' with message 'Not enough arguments.' in C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Input\Input.php:77
+Stack trace:
+#0 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(252): Symfony\Component\Console\Input\Input->validate()
+#1 C:\wamp\www\Projets_MVC_Free_Ads\vendor\laravel\framework\src\Illuminate\Console\Command.php(101): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(874): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Routing\Console\ControllerMakeCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\wamp\www\Projets_MVC_Free_Ads\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\wamp\www\Projets_MVC_Free_Ads\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 {main}  
+[2015-05-11 08:27:31] local.ERROR: exception 'InvalidArgumentException' with message 'Command "mak" is not defined.
+
+Did you mean one of these?
+    make:controller
+    make:middleware
+    make:migration
+    make:provider
+    make:command
+    make:request
+    make:console
+    make:model
+    make:event' in C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php:549
+Stack trace:
+#0 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(192): Symfony\Component\Console\Application->find('mak')
+#1 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\wamp\www\Projets_MVC_Free_Ads\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\wamp\www\Projets_MVC_Free_Ads\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2015-05-11 08:27:43] local.ERROR: exception 'InvalidArgumentException' with message 'Command "ma:az" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:controller
+    make:middleware
+    make:request
+    make:provider
+    make:console
+    make:event
+    make:model
+    make:command' in C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php:549
+Stack trace:
+#0 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(192): Symfony\Component\Console\Application->find('ma:az')
+#1 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\wamp\www\Projets_MVC_Free_Ads\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\wamp\www\Projets_MVC_Free_Ads\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2015-05-11 08:27:49] local.ERROR: exception 'RuntimeException' with message 'Not enough arguments.' in C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Input\Input.php:77
+Stack trace:
+#0 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(252): Symfony\Component\Console\Input\Input->validate()
+#1 C:\wamp\www\Projets_MVC_Free_Ads\vendor\laravel\framework\src\Illuminate\Console\Command.php(101): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(874): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Foundation\Console\ModelMakeCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\wamp\www\Projets_MVC_Free_Ads\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\wamp\www\Projets_MVC_Free_Ads\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 {main}  
+[2015-05-11 13:14:05] local.ERROR: exception 'InvalidArgumentException' with message 'Command "app" is not defined.
+
+Did you mean this?
+    app:name' in C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php:549
+Stack trace:
+#0 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(192): Symfony\Component\Console\Application->find('app')
+#1 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\wamp\www\Projets_MVC_Free_Ads\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\wamp\www\Projets_MVC_Free_Ads\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2015-05-11 13:14:10] local.ERROR: exception 'RuntimeException' with message 'Not enough arguments.' in C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Input\Input.php:77
+Stack trace:
+#0 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(252): Symfony\Component\Console\Input\Input->validate()
+#1 C:\wamp\www\Projets_MVC_Free_Ads\vendor\laravel\framework\src\Illuminate\Console\Command.php(101): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(874): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Foundation\Console\AppNameCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\wamp\www\Projets_MVC_Free_Ads\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\wamp\www\Projets_MVC_Free_Ads\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 {main}  
+[2015-05-11 14:31:32] local.ERROR: exception 'InvalidArgumentException' with message 'Command "make:" is ambiguous (make:command, make:console and 7 more).' in C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php:566
+Stack trace:
+#0 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(192): Symfony\Component\Console\Application->find('make:')
+#1 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\wamp\www\Projets_MVC_Free_Ads\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\wamp\www\Projets_MVC_Free_Ads\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2015-05-11 14:31:36] local.ERROR: exception 'InvalidArgumentException' with message 'Command "make" is not defined.
+
+Did you mean one of these?
+    make:controller
+    make:middleware
+    make:migration
+    make:provider
+    make:command
+    make:request
+    make:console
+    make:model
+    make:event' in C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php:549
+Stack trace:
+#0 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(192): Symfony\Component\Console\Application->find('make')
+#1 C:\wamp\www\Projets_MVC_Free_Ads\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\wamp\www\Projets_MVC_Free_Ads\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\wamp\www\Projets_MVC_Free_Ads\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
