@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Le Bon Campus</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="Acheter ou vendez !!" />
+	<?php echo Html::style('css/bootstrap.min.css'); ?>
+
+	<?php echo Html::style('css/bootstrap-theme.min.css'); ?>
+
+	<?php echo Html::style('css/bootstrap.css.map'); ?>
+
+	<?php echo Html::style('css/bootstrap-theme.css.map'); ?>
+
+	<?php echo Html::style('css/dropzone.css'); ?>
+
+	<?php echo Html::style('css/fixed-top.css'); ?>
+
+	<?php echo Html::script('js/jquery-2.1.3.js'); ?>
+
+	<?php echo Html::script('js/bootstrap.min.js'); ?>
+
+	<?php echo Html::script('js/recherche.js'); ?>
+
+    <!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="panel">Le Bon Campus</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="panel">Home</a></li>
+					<li><a href="profil">Profil</a></li>
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Annonces<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li class="active"><a href="ajoutAnnonce">Ajouter</a></li>
+							<li><a href="displayAllAnnonce">Tout les annonces</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Vos Annonces</li>
+							<li><a href="updateUserAnnonce">Modifier ou Supprimer</a></li>
+							<li><a href="displayUserAnnonce">Les voir</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="recherche">Recherche</a></li>
+					<li>
+						<?php echo Form::open(['url' => 'deco']); ?>
+
+						<?php echo Form::submit('Deconnexion', ['class' => 'btn btn-primary form-control']); ?>
+
+						<?php echo Form::close(); ?>
+
+					</li>
+					<li><a href="message">Message</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<?php
+	if (Session::has('messageDejaCo')) {
+		?>
+		<div class="alert alert-warning" role="alert"><?php echo Session::get('messageDejaCo'); ?></div>
+		<?php
+	}
+	if (Session::has('messagePasImage')) {
+		?>
+		<div class="alert alert-danger" role="alert"><?php echo Session::get('messagePasImage'); ?></div>
+		<?php
+	}
+	if (Session::has('messageNoImage')) {
+		?>
+		<div class="alert alert-danger" role="alert"><?php echo Session::get('messageNoImage'); ?></div>
+		<?php
+	}
+	if (Session::has('messageAnnonce')) {
+		?>
+		<div class="alert alert-success" role="alert"><?php echo Session::get('messageAnnonce'); ?></div>
+		<?php
+	}
+	if (Session::has('messageTooMuchImage')) {
+		?>
+		<div class="alert alert-danger" role="alert"><?php echo Session::get('messageTooMuchImage'); ?></div>
+		<?php
+	}
+	?>
+	<div class="container">
+		<div class="jumbotron">
+			<?php echo Form::open(array( 'url' => 'ajouterAnnonce' , 'files'=>true)); ?>
+
+			<div class="form-group">
+				<?php echo Form::label('titre', 'Titre de L"annonce :'); ?>
+
+				<?php echo Form::text('titre', null, ['class' => 'form-control']); ?>
+
+			</div>
+			<div class="form-group">
+				<?php echo Form::label('prix', 'Prix :'); ?>
+
+				<p id="valeurPrix"></p>
+				<?php echo Form::input('range', 'prix', null, ['class' => 'form-control',
+				'min' => 0, 'max' => 9999, 'onchange' => 'rangeValueAjouter()']); ?>
+
+			</div>
+			<div class="form-group">
+				<?php echo Form::label('typePrix', 'Type de monnaie :'); ?>
+
+				<?php echo Form::select('typePrix', [
+				'€' => 'Euro (€)',
+				'$' => 'Dollar ($)',
+				'¥ JPY' => 'Yen Japonais (¥)',
+				'¥ CNY' => 'Yuan Chinois (¥)',
+				'₩' => 'Won Sud-Coréen (₩)',
+				'₺' => 'Livre Turque (₺)',
+				'₽' => 'Rouble Russe (₽)'
+				],
+				['class' => 'form-control']
+				); ?>
+
+			</div>
+			<div class="form-group">
+				<?php echo Form::label('numero', 'Numero de Telephone :'); ?>
+
+				<?php echo Form::input('tel', 'numero', null, ['class' => 'form-control', 'pattern' => '[0-9]{10,}', 'title' => 'Un numéro de telephone à 10 chiffres !!', 'placeholder' => '0123456789']); ?>
+
+			</div>
+			<h2>Vous pouvez ajouter jusqu'à 4 images appuyer sur CTRL pour en selectionner plusieurs :</h2>
+			<div class="form-group">
+				<?php echo Form::label('file[]', 'Image  :'); ?>
+
+				<?php echo Form::input('file', 'file[]', null, ['class' => 'form-control', 'multiple' => 'multiple']); ?>
+
+				<?php echo Form::label('description', 'Decriver votre annonce :'); ?>
+
+				<?php echo Form::textarea('description', null, ['class' => 'form-control']); ?>
+
+				<?php echo Form::submit('Ajouter Annonce', ['class' => 'btn btn-primary form-control']); ?>
+
+			</div>
+			<?php echo Form::close(); ?>
+
+		</div>
+	</div> 
+</body>
+</html>

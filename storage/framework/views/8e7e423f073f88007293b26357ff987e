@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Le Bon Campus</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="Acheter ou vendez !!" />
+	<?php echo Html::style('css/bootstrap.min.css'); ?>
+
+	<?php echo Html::style('css/bootstrap-theme.min.css'); ?>
+
+	<?php echo Html::style('css/bootstrap.css.map'); ?>
+
+	<?php echo Html::style('css/bootstrap-theme.css.map'); ?>
+
+	<?php echo Html::style('css/fixed-top.css'); ?>
+
+	<?php echo Html::script('js/jquery-2.1.3.js'); ?>
+
+	<?php echo Html::script('js/bootstrap.min.js'); ?>
+
+    <!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="panel">Le Bon Campus</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="panel">Home</a></li>
+					<li><a href="profil">Profil</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Annonces<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="ajoutAnnonce">Ajouter</a></li>
+							<li><a href="displayAllAnnonce/">Tout les annonces</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Vos Annonces</li>
+							<li><a href="updateUserAnnonce/">Modifier ou Supprimer</a></li>
+							<li><a href="displayUserAnnonce/">Les voir</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="recherche/">Recherche</a></li>
+					<li>
+						<?php echo Form::open(['url' => 'deco']); ?>
+
+						<?php echo Form::submit('Deconnexion', ['class' => 'btn btn-primary form-control']); ?>
+
+						<?php echo Form::close(); ?>
+
+					</li>
+					<li><a href="message/">Message</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<?php
+	if (Session::has('messageDejaCo')) {
+		?>
+		<div class="alert alert-warning" role="alert"><?php echo Session::get('messageDejaCo'); ?></div>
+		<?php
+	}
+	?>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Bienvenue <?php echo Auth::user()->lastname;?> <?php echo Auth::user()->name;?> !!</h1>
+			<p>Ajouter, modifier vos annonces ou faite une recherche pour trouver ce que vous voulez !!</p>
+			<p>
+				<a class="btn btn-lg btn-primary" href="ajoutAnnonce" role="button">Ajouter une annonce !! Vite !!!</a>
+			</p>
+		</div>
+	</div> 
+</body>
+</html>
